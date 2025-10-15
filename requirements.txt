@@ -1,6 +1,18 @@
+# Flask and related libraries
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-Marshmallow==1.2.1
+Flask-Bcrypt==1.0.1
+Flask-JWT-Extended==4.6.0
+Flask-Cors==5.0.0
+
+# Django and dependencies
 asgiref==3.2.7
 Django==3.0.5
 django-widget-tweaks==1.4.8
 pytz==2020.1
 sqlparse==0.3.1
 
+# Additional tools
+graphviz==0.20.3
+pytest==8.3.3
