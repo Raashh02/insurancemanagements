@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: insurancemanagement
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn insurancemanagement.wsgi:application --bind 0.0.0.0:8000
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: "your-secret-key"
+    autoDeploy: true

@@ -26,9 +26,9 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'static')
 SECRET_KEY = 'ls@!_(edqp*xy76kvbsst$07at(v^li*2&ew!^$8o(@wa6@a+$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -148,5 +149,4 @@ EMAIL_RECEIVING_USER = ['to@gmail.com'] # email on which you will receive messag
 
 STATIC_URL = '/static/'
 
-# Add this line for collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
